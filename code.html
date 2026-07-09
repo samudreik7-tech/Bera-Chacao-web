@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="es" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bera Chacao</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&amp;family=Inter:wght@400;600&amp;family=Geist:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#410002",
+                        "on-error-container": "#ffdad6",
+                        "outline": "#ae8883",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "error": "#ffb4ab",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary": "#303030",
+                        "surface-container": "#201f1f",
+                        "primary-container": "#e31b23",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed-dim": "#ffb4ac",
+                        "secondary-container": "#474746",
+                        "on-error": "#690005",
+                        "surface": "#131313",
+                        "primary-fixed": "#ffdad6",
+                        "on-tertiary": "#2f3131",
+                        "background": "#131313",
+                        "on-surface-variant": "#e7bdb8",
+                        "surface-container-highest": "#353534",
+                        "on-secondary-fixed-variant": "#474746",
+                        "tertiary-container": "#727474",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-primary-fixed-variant": "#93000d",
+                        "inverse-primary": "#c00015",
+                        "surface-dim": "#131313",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-primary-container": "#fff9f8",
+                        "on-surface": "#e5e2e1",
+                        "outline-variant": "#5d3f3c",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-container": "#fbfbfb",
+                        "on-secondary-container": "#b7b5b4",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-variant": "#353534",
+                        "on-primary": "#690006",
+                        "on-background": "#e5e2e1",
+                        "tertiary": "#c6c6c7",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-bright": "#393939",
+                        "primary": "#ffb4ac",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-tint": "#ffb4ac",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "secondary": "#c8c6c5",
+                        "on-secondary-fixed": "#1b1b1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "margin-desktop": "40px",
+                        "section-gap": "80px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "cta-text": ["Montserrat"],
+                        "label-caps": ["Geist"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+                        "cta-text": ["16px", { "lineHeight": "20px", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); }
+        .hero-overlay { background: linear-gradient(180deg, rgba(19, 19, 19, 0) 0%, rgba(19, 19, 19, 0.8) 100%); }
+    </style>
+</head>
+<body class="antialiased font-body-md overflow-x-hidden" data-mode="connect">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-outline-variant shadow-md transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg font-bold text-primary" href="#">Bera Chacao</a>
+<!-- Desktop Nav -->
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#modelos">Modelos</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#financiamiento">Financiamiento</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#concesionarios">Concesionario</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#garantia">Garantía</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#horarios">Horarios</a>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#contacto">Contacto</a>
+</div>
+<!-- CTA Desktop -->
+<a class="hidden md:inline-flex bg-primary-container text-on-primary-container font-cta-text text-cta-text px-6 py-3 rounded hover:shadow-[0_0_15px_rgba(227,27,35,0.5)] scale-95 active:scale-90 transition-transform" href="#contacto">
+                Cotiza tu moto
+            </a>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-[80px]">
+<!-- Hero Section -->
+<section class="relative h-[80vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 w-full h-full bg-surface-container" data-alt="A powerful red and black Bera sports motorcycle showcased against a dark, textured industrial background." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1CXKPuuRPrSk6w4G2rSQACwAzeKLSw5a8KNJUoqM3Ds3yH5Ckzq9VOPOtH0LTxhS07j1-mm9zRobcVB45vX4os_bM8RxTqdwLq6yafjGYTf0iZywgHzsYgUn_UyJUA8lA1od4eryDsEImLguHG-Cl6dUb_EW6SUeCQ-K9qbQtzvIJ47IyLsPQPwK4uM83LllTsgHIa4M75m3R-sLYfAfpLNAvipXLoXQxXO6isT8t-LW74vdV9KoT9DRyzCHBHTGU7u3R4MI"); background-size: cover; background-position: center center;'></div>
+<div class="absolute inset-0 hero-overlay"></div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto flex flex-col items-center gap-6">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-primary-container drop-shadow-lg">Dos rudas mueven el alma</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl drop-shadow-md">
+                    La mejor tecnología y potencia sobre dos ruedas en Venezuela.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<a class="bg-primary-container text-on-primary-container font-cta-text text-cta-text px-8 py-4 rounded flex items-center gap-2 hover:shadow-[0_0_20px_rgba(227,27,35,0.6)] transition-all" href="#contacto">
+<span class="material-symbols-outlined">chat</span>
+                        Cotizar por WhatsApp
+                    </a>
+<a class="bg-surface/50 backdrop-blur-sm border border-outline text-on-surface font-cta-text text-cta-text px-8 py-4 rounded hover:bg-surface transition-colors" href="#modelos">
+                        Ver modelos
+                    </a>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="bg-surface-container-highest py-8 border-y border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">verified</span>
+<span class="font-headline-md text-headline-md text-on-surface">+25 años</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">EN EL MERCADO</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">two_wheeler</span>
+<span class="font-headline-md text-headline-md text-on-surface">+500k</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">MOTOS VENDIDAS</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">storefront</span>
+<span class="font-headline-md text-headline-md text-on-surface">60+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">CONCESIONARIOS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Catalog Section -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="modelos">
+<div class="mb-12 flex justify-between items-end">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Nuestro Catálogo</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Descubre la máquina perfecta para tu estilo de vida.</p>
+</div>
+<div class="hidden md:flex gap-2">
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-bright transition-colors border border-outline-variant">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-bright transition-colors border border-outline-variant">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Model 1 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden group hover:border-outline transition-colors duration-300 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-surface flex items-center justify-center p-6">
+<img alt="Bera BRF 150cc" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 p-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVfrHsNJv5FGcCWginOUCyzYWi7A9uezRT07oo87GbKIkAxsrGYW75ZEQdRVHPQj5iJkqATvwkevb5BSD11NNG6JdjW0S-Gvfix7rRONjXpegP-iGlVDJ97MYVtngYxBzKaAXk4YwD2Pu1VZqExoRWZ3J4hJje6V7-TyFLR4InN-QH6_WcWz68uN0Iof0YZRB6t9jvVfALPI92CZV5ADBpBBQYcvO1vNNu_yFmia6tWx23e3GR7ORmGB5nLtPxRtJ6pZ1_qsw"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Bera BRF 150cc</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Una moto muy económica y ligera, famosa por su bajo consumo de combustible y favorita para el trabajo diario.</p>
+</div>
+</div>
+<!-- Model 2 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden group hover:border-outline transition-colors duration-300 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-surface flex items-center justify-center p-6">
+<img alt="Bera Kavak 150cc" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 p-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUF8PXWUUigUw1mPvL1IePBsxPbDpP60u1tJyOSDJF-tTsQ_EE3SBeWjQXPjmWwB-FE2HT5oC9R2uWUom1BnKQm0hSHlrfFGOpyIO4AtO0Icga8zNrEGoZpL-8S_w3Bm2uqB1aSxBrfRxLrt-RcQsTmmqNE-LY6CFKqmLiGxPYmlsTQ-YSLR0MrgpzPl7sB6qBgrQj5vlBh9qZWfbExXMcV0d0ek3gb53AHDoKneP-5PXnI4TwRGA5CVou44lQj8Alc44oxA4"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Bera Kavak 150cc</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Modelo clásico muy resistente, ideal para las calles de la ciudad y el trabajo rudo.</p>
+</div>
+</div>
+<!-- Model 3 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden group hover:border-outline transition-colors duration-300 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-surface flex items-center justify-center p-6">
+<img alt="Bera DT 200cc" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 p-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMxYN-GczXLCuLalGkQtzwniel3ooMSqCgfXOOHMJzWUycLuVRSSiv88TDzpRUJH4xWx5dcIfiDzaPOHqjVatqhQusEJHykzWEoSWGuDAo_3wnbq0RTu7TOe4c7-w6kxBOymbLtYxqlzqzRnHp4Fi0Vta6vviVQZhIzJyPi84SL1qcXuyE3mwcoJczS-LJRHc17y0Ej3FO3aq-ylmZk6kw3Sicphw22ut6owOz6pSipZf0mUxKQjBTjyiLlXJMmotKTZ3mzMA"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Bera DT 200cc</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Moto de diseño deportivo con un aspecto agresivo y motor potente para mayor velocidad.</p>
+</div>
+</div>
+<!-- Model 4 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden group hover:border-outline transition-colors duration-300 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-surface flex items-center justify-center p-6">
+<img alt="Bera Milan" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 p-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbBSwnaGEbsNittDv8O3jPfV3lvdTUeDfbYAMDb2dEhUwoX7nJ7xnBJaSErQ9B2OjRplM5riXRDZv5xCNGA6f8UI3Sd0i2m0OY2Mm4yXIWs_GjyfrvbXOYQeyw30L7fstL_nyWy1Pg8mhEOiTWgkpNtpltTgtjyKBeUa1Ruwh75sHUudjSTmgnTO3L_4C88lgPmGHZHcKZbsv26UXB5xoj4cLaEowAY3asnUykGlniztwd-BihPtt2yGjULwHYbZBokabp-Lk"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Bera Milan</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Moto automática cómoda y fácil de manejar, ideal para trayectos cortos.</p>
+</div>
+</div>
+<!-- Model 5 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden group hover:border-outline transition-colors duration-300 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-surface flex items-center justify-center p-6">
+<img alt="Bera GR 250cc" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 p-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8aIChLOWlOK_anPpNhjzJYh_ZyEfynHbCNjNhVglx-EtDrovbtXraMunG4Tz1A4RKQg74i-sZ9pDmdycQcRcx5UAB6ZFomsnrV2tW9Sgh2TSRXcTd0aawraYHAfXHtEsjsBIKka87asUDO78qcerDWxG8RMFZitbVvISY54KfvPS8PrJ5jxBNEFDZeDZ6_IvjdYR49rxhyvoj3nozxv6Ihd2J0ecouSwEWEqDw76IVrOxW96VMh7_6vEBI4OvFKVFjmw07YE"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Bera GR 250cc</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Moto fuerte y alta, perfecta para viajes largos o terrenos difíciles.</p>
+</div>
+</div>
+<!-- Model 6 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden group hover:border-outline transition-colors duration-300 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-surface flex items-center justify-center p-6">
+<img alt="Bera BR200cc" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 p-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv5Tv48WuBC96735f5C0zKqOZdD8_1Wp8q4zvrvavXUsKROMnrepYZXKHj3th1KmhGin6G8KgI-aMvgAnUtzzr0F5drhS2s22WhedeqRRNKAAEak6C2wfzI93j-H2z7pIYDJ7sDyngc_VFq9_sAh1jddJdcaRJs3dmJXCfaYLCCHKq1l519dBAvAK2oJRmGpbvVvgcyOxovBdn68b9PEYkKT98jzuYAVSQ1T8bOaBoJa4o9ge_bWKD1IXu3s9nKs8I2i1frjQ"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Bera BR200cc</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Clásica, fuerte y duradera, muy buscada por su gran fuerza de arranque.</p>
+</div>
+</div>
+<!-- Model 7 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden group hover:border-outline transition-colors duration-300 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-surface flex items-center justify-center p-6">
+<img alt="Bera Cobra 150cc" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 p-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBhz6lV-0Gsbv7H7yrThbIPazQJe9tHXbnosPv17gY_ieF06lvt0qNP8EoZzbzV1iW7yc7TH_nRbj33_CmsRC25ajRqGdjy9DKtGcQ23_5wC1PGEMxo10fLscHWC2V4qAafe9VzIawrno6euh8zdeWdrp8VtFj1fS3Iwq3te5CtFvPsPooS9KhvTT-XCFRNuySPY5RPLMctlxelxOkhmygxt_WwSb6Z7NXyUfK72AtDZqccunEf534aO1P1jJl_KLL7hGnwGs"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Bera Cobra 150cc</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Motocicleta con un estilo elegante y urbano.</p>
+</div>
+</div>
+<!-- Model 8 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden group hover:border-outline transition-colors duration-300 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-surface flex items-center justify-center p-6">
+<img alt="Bera Meru 110cc" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 p-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXgMZPDsa3un5fl3UL9uFfOn5LBHb1MiWgyM_UIk3gTScBfHZrmSocCbnVFuT4R6njomqrjxnlYDyjBRbTdJPAuAej4qvGejahLjeizn1Qla9LOL25amWDiOxQKK23ejxDygY4VKmXCz3Z02FnGflzVh7ig24k6eYPG5z_KzzmSFijTpem3GdBkx_oE4adldYJIoSxa7zXQqrZQ490CXwmgZzRaHNBPrNO7_IPRe3lFcJMS3vOYyUwOfSvAgfeyVmoZk5Xd14"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Bera Meru 110cc</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Moto pequeña de baja cilindrada, muy barata de mantener.</p>
+</div>
+</div>
+<!-- Model 9 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden group hover:border-outline transition-colors duration-300 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-surface flex items-center justify-center p-6">
+<img alt="Bera BRZ 250cc" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 p-4" src="https://lh3.googleusercontent.com/aida/AP1WRLsS2BCy6vAiL6takucp-FeSbGj4b5oHSSomvVLFdxDaGWyLhCJHkJ5AqqpZ1wYaB-tb76Qgm3RjMtOX61qDyv76paa9lCkI50BqZfbKp0HB4I99Y32gKGAZVlv4Ep4YyMjO14pHVvRK4UhsxX3MnWssqmzXd-NGlY0lPvnTi2G4t4y0YP_tMlyYupdExb301qtRQ7OPXul3Tl5pW2HXkPd5SxqFzN8KUh_aeVWrW1YsXNxjG2iYDw"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Bera BRZ 250cc</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Diseño de doble propósito, ideal para ciudad y caminos de tierra.</p>
+</div>
+</div>
+<!-- Model 10 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden group hover:border-outline transition-colors duration-300 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-surface flex items-center justify-center p-6">
+<img alt="Bera Socialista" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 p-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMA6FMwuZiaRtskABJG7EMekImvRlRjtWmALoDPT3yrRxk8COtNEhlmTm_0_mgwe2BhB5C5xtkOfaDx3Pc0AQN0GKM-sXNssohtUWcZDwBKsPxvvdQ61dDvuS7N2eERy1zl53CXZWmWslFQWF2BmTMR5nHtk43AHgQjt99_agA9p7ZMMFV2jE5M_C0wg3Rq8n8qjyMEN4_HE9XZZW5UnU8dQ5qWQV6XIuRfeiYv8gVFdPdE0K1r1ZduholJ46MlAbjTOy5Weg"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Bera Socialista</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Modelo icónico y muy económico pensado para el trabajo diario y ahorro de combustible.</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden group hover:border-outline transition-colors duration-300 flex flex-col"><div class="relative h-64 overflow-hidden bg-surface flex items-center justify-center p-6"><img alt="Bera SBR 150cc" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 p-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuJjRLYH_F1QLe71qQCuvlma7TqCgXoJmDOP9iknQzpvuPZJk2YrPougrd3DWHKWnBtDBU_ENLdlRD8bhI24OOJGmgV_xCC3Cb_p9CXuDrOKf5tj-YxzcjNtxaZyXqqStzzU_O1AOtQC7NfQVnNq4M32ZLumk6f-ibjc4ALrx6fOFTh_Dt-CTAYIR2OHLwl1U6Dadafqetbt-UO9M5p7QsWnWcQWVCP1gTMHRzPSUM4yZEH2XuChnpbgCgSIOo744Hlo17Tpo"/></div><div class="p-6 flex flex-col flex-grow"><h3 class="font-headline-md text-headline-md text-on-surface mb-2">Bera SBR 150cc</h3><p class="font-body-md text-body-md text-on-surface-variant">Potencia y estilo deportivo para dominar la ciudad.</p></div></div></div>
+</section>
+<!-- Financing Section (Bento Grid Style) -->
+<section class="py-section-gap bg-surface-container-lowest border-y border-outline-variant" id="financiamiento">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Facilidades de Pago</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Hacemos que tu sueño de rodar sea una realidad con opciones adaptadas a ti.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container p-8 rounded-2xl border border-outline-variant hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">payments</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Contado</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">El mejor precio del mercado para pagos inmediatos. Descuentos exclusivos aplicables.</p>
+</div>
+<div class="bg-surface-container p-8 rounded-2xl border border-outline-variant hover:border-primary/50 transition-colors md:col-span-2 relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">handshake</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Financiamiento Propio</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-md">Planes de cuotas flexibles directamente con nosotros, sin complicaciones.</p>
+<button class="bg-primary-container text-on-primary-container font-cta-text text-cta-text px-6 py-3 rounded hover:shadow-[0_0_15px_rgba(227,27,35,0.5)] transition-all">Conoce nuestros planes</button>
+</div>
+<span class="material-symbols-outlined absolute -right-10 -bottom-10 text-[200px] text-surface-container-highest z-0 select-none">percent</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Warranty Section -->
+<section class="py-section-gap bg-surface-container-lowest border-b border-outline-variant" id="garantia">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Garantía Bera 12x12</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">La garantía de motos Bera funciona de la siguiente manera:</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-surface-container p-8 rounded-2xl border border-outline-variant hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">timer</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Tiempo y kilometraje</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Es una garantía de 12x12, lo que significa que cubre 12 meses o 12,000 kilómetros (lo que ocurra primero).</p>
+</div>
+<div class="bg-surface-container p-8 rounded-2xl border border-outline-variant hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">build</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Qué cubre</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Cubre el 100% de todas las piezas y partes del motor y de la caja.</p>
+</div>
+<div class="bg-surface-container p-8 rounded-2xl border border-outline-variant hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">block</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Qué NO cubre</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Excluye las piezas de desgaste, como los cauchos, las pastillas de freno y la cadena.</p>
+</div>
+<div class="bg-surface-container p-8 rounded-2xl border border-outline-variant hover:border-primary/50 transition-colors lg:col-span-2">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">oil_barrel</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Condición obligatoria</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Para que la garantía se mantenga válida, es obligatorio que utilices su aceite oficial Bera.</p>
+</div>
+<div class="bg-surface-container p-8 rounded-2xl border border-outline-variant hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">public</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Cobertura nacional</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Se respeta en cualquier concesionario oficial del país. Si compras la moto en Caracas y viajas a otra ciudad, cualquier concesionario autorizado te cubrirá el servicio sin problemas.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Horarios Section -->
+<section class="py-section-gap bg-surface-container-lowest border-b border-outline-variant" id="horarios">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Nuestros Horarios</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Te esperamos en el siguiente horario de atención.</p>
+</div>
+<div class="max-w-xl mx-auto bg-surface-container p-8 rounded-2xl border border-outline-variant">
+<ul class="space-y-4">
+<li class="flex justify-between font-body-md text-on-surface"><span class="font-bold">Lunes:</span> <span>9:00 a.m. – 5:30 p.m.</span></li>
+<li class="flex justify-between font-body-md text-on-surface"><span class="font-bold">Martes:</span> <span>9:00 a.m. – 5:30 p.m.</span></li>
+<li class="flex justify-between font-body-md text-on-surface"><span class="font-bold">Miércoles:</span> <span>8:30 a.m. – 5:30 p.m.</span></li>
+<li class="flex justify-between font-body-md text-on-surface"><span class="font-bold">Jueves:</span> <span>9:00 a.m. – 5:30 p.m.</span></li>
+<li class="flex justify-between font-body-md text-on-surface"><span class="font-bold">Viernes:</span> <span>9:00 a.m. – 5:30 p.m.</span></li>
+<li class="flex justify-between font-body-md text-on-surface"><span class="font-bold">Sábado:</span> <span>9:30 a.m. – 1:30 p.m.</span></li>
+<li class="flex justify-between font-body-md text-on-surface"><span class="font-bold">Domingo:</span> <span class="text-error font-semibold">Cerrado</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="py-section-gap bg-surface" id="concesionarios"><div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"><div class="mb-12"><h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Nuestra Ubicacion</h2><p class="font-body-lg text-body-lg text-on-surface-variant">Visítanos en nuestro concesionario en Chacao.</p></div><div class="grid grid-cols-1 md:grid-cols-2 gap-gutter"><div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant hover:border-primary transition-colors flex flex-col gap-4"><div class="flex items-center gap-3 text-primary"><span class="font-headline-md text-headline-md text-on-surface">Ubicación</span><h3 class="font-headline-md text-headline-md text-on-surface"><br/></h3></div><p class="font-body-md text-body-md text-on-surface-variant">Calle Elice, Subida al C.C San Ignacio. Chacao Miranda</p><a class="mt-auto text-primary font-cta-text text-cta-text flex items-center gap-2 hover:underline" href="https://maps.google.com">Ver en Google Maps</a></div><div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant hover:border-primary transition-colors flex flex-col gap-4"><div class="flex items-center gap-3 text-primary"><span class="material-symbols-outlined">store</span><h3 class="font-headline-md text-headline-md text-on-surface">Bera Chacao </h3></div><p class="font-body-md text-body-md text-on-surface-variant">BERA, F4VV+FJJ, CALLE ELICE EDIFICIO VICTORIA CHACAO A MEDIA CUADRA DE LA SALIDA DEL METRO CARACAS, 1060, Miranda</p><a class="mt-auto text-primary font-cta-text text-cta-text flex items-center gap-2 hover:underline" href="https://maps.google.com">Ver en Google Maps <span class="material-symbols-outlined text-sm">open_in_new</span></a></div></div></div></section>
+<!-- Contacto Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap" id="contacto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Numbers Section -->
+<div class="flex flex-col space-y-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6 border-l-4 border-primary pl-4">Nuestros Números de Contacto</h2>
+<div class="space-y-4 bg-surface-container-low p-6 rounded-lg border border-surface-container-highest shadow-[0_0_40px_rgba(227,27,35,0.05)]">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-4">Números de nuestras Call Center</h3>
+<!-- Contact Item -->
+<div class="flex items-center justify-between py-4 border-b border-surface-variant group hover:bg-surface-container-high transition-colors -mx-6 px-6 cursor-pointer">
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">smartphone</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">0424 206 3396</span>
+</div>
+<button class="text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+<!-- Contact Item -->
+<div class="flex items-center justify-between py-4 border-b border-surface-variant group hover:bg-surface-container-high transition-colors -mx-6 px-6 cursor-pointer">
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">phone_iphone</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">0414 939 7669</span>
+</div>
+<button class="text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+<!-- Contact Item -->
+<div class="flex items-center justify-between py-4 group hover:bg-surface-container-high transition-colors -mx-6 px-6 cursor-pointer">
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary group-hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">call</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">212 265 3535</span>
+</div>
+<span class="font-label-caps text-label-caps text-tertiary-container">Línea Fija</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Section (WhatsApp) -->
+<div class="flex flex-col justify-center space-y-6">
+<div class="bg-surface-container-low p-8 rounded-lg border border-surface-container-highest flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-[#25D366]/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl text-[#25D366]">forum</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Cotiza al Instante</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-md">Inicia un chat con nuestras asesoras para recibir precios, disponibilidad y opciones de financiamiento inmediatas.</p>
+<div class="w-full space-y-4">
+<a class="flex items-center justify-center w-full bg-primary-container text-on-primary-container font-cta-text text-cta-text py-4 px-6 rounded-lg scale-95 hover:scale-100 active:scale-90 transition-transform btn-primary-glow" href="#">
+<span class="material-symbols-outlined mr-2">chat</span>
+                                WhatsApp: 0424-2063396
+                            </a>
+<a class="flex items-center justify-center w-full bg-surface-container text-on-surface font-cta-text text-cta-text py-4 px-6 rounded-lg border border-surface-container-highest hover:border-primary/50 hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined mr-2">chat</span>
+                                WhatsApp: 0414-9397669
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-section-gap border-t border-outline-variant w-full mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Bera Chacao</span>
+<p class="font-body-md text-body-md text-on-surface-variant">La mejor tecnología y potencia sobre dos ruedas en Venezuela.</p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-label-caps text-on-surface mb-2">ENLACES</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#concesionarios">Concesionario</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#contacto">Teléfonos</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Legal</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-caps text-label-caps text-on-surface mb-2">SOCIAL</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 flex items-center gap-2" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 flex items-center gap-2" href="#">Facebook</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 flex items-center gap-2" href="#">TikTok</a>
+</div>
+<div class="flex flex-col gap-3 justify-end">
+<p class="font-body-md text-body-md text-on-surface-variant mt-auto pt-8 border-t border-outline-variant md:border-none md:pt-0">
+                    © 2024 Bera Chacao. Todos los derechos reservados.
+                </p>
+</div>
+</div>
+</footer>
+<!-- FAB WhatsApp -->
+<a class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform" href="#contacto">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</a>
+</body></html>
